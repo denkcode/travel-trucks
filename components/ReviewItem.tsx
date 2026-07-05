@@ -1,4 +1,4 @@
-import { Rating } from "@/components/Rating/Rating";
+import { Rating } from "@/components/Rating";
 import type { Review } from "@/types";
 
 type ReviewItemProps = {

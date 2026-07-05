@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useCatalogFilters } from "@/features/catalog/hooks/useCatalogFilters";
+import { useCatalogFilters } from "@/hooks/useCatalogFilters";
 import {
   FORM_OPTIONS,
   TRANSMISSION_OPTIONS,

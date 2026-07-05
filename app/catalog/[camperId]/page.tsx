@@ -1,13 +1,13 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { useCamperDetails } from "@/features/camper-details/hooks/useCamperDetails";
-import { useCamperReviews } from "@/features/camper-details/hooks/useCamperReviews";
-import Loading from "@/features/components/Loading";
-import Gallery from "@/features/camper-details/components/Gallery";
-import CamperInfo from "@/features/camper-details/components/CamperInfo";
-import ReviewsList from "@/features/camper-details/components/ReviewsList";
-import BookingForm from "@/features/camper-details/components/BookingForm";
+import { useCamperDetails } from "@/hooks/useCamperDetails";
+import { useCamperReviews } from "@/hooks/useCamperReviews";
+import Loading from "@/components/Loading";
+import Gallery from "@/components/Gallery";
+import CamperInfo from "@/components/CamperInfo";
+import ReviewsList from "@/components/ReviewsList";
+import BookingForm from "@/components/BookingForm";
 
 const CamperDetails = () => {
   const params = useParams();

@@ -1,11 +1,11 @@
 "use client"
-import { useCatalogFilters } from '@/features/catalog/hooks/useCatalogFilters';
-import { CamperCardList } from '@/features/components/CamperCardList';
-import { LoadMoreButton } from '@/features/components/LoadMoreButton';
-import { useCampersInfinite } from '@/features/catalog/hooks/useCampersInfinite';
-import Loading from '@/features/components/Loading';
-import CamperFilters from "@/features/components/CamperFilters";
-import NoCampersFound from "@/features/components/NoCampersFound";
+import { useCatalogFilters } from '@/hooks/useCatalogFilters';
+import { CamperCardList } from '@/components/CamperCardList';
+import { LoadMoreButton } from '@/components/LoadMoreButton';
+import { useCampersInfinite } from '@/hooks/useCampersInfinite';
+import Loading from '@/components/Loading';
+import CamperFilters from "@/components/CamperFilters";
+import NoCampersFound from "@/components/NoCampersFound";
 import { Suspense } from 'react';
 
 function CatalogContent() {
