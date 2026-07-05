@@ -2,52 +2,55 @@
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?logo=tailwind-css)](https://tailwindcss.com/)
-[![TanStack Query](https://img.shields.io/badge/TanStack_Query-v5-FF4154?logo=reactquery)](https://tanstack.com/query/latest)
-[![Swiper](https://img.shields.io/badge/Swiper-11-6332F6?logo=swiper)](https://swiperjs.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
+[![TanStack Query](https://img.shields.io/badge/TanStack_Query-v5-FF4154)](https://tanstack.com/query/latest)
 
-A modern web application for browsing, filtering, and booking camper vans. TravelTrucks allows users to explore available campers, apply advanced filters, view detailed camper information, browse photo galleries, read customer reviews, and submit booking requests through an intuitive interface.
+TravelTrucks is a modern web application for browsing and booking camper vans. The application allows users to explore available campers, apply server-side filters, view detailed information, browse image galleries, read customer reviews, and submit booking requests through an intuitive interface.
 
-## 🌐 Live Demo
+---
 
-**Application:** https://travel-trucks-five-liard.vercel.app/
+## 🔗 Live Demo
 
-**Repository:** https://github.com/denkcode/travel-trucks
+🌐 **Website**
+
+https://travel-trucks-five-liard.vercel.app/
+
+📂 **Source Code**
+
+https://github.com/denkcode/travel-trucks
 
 ---
 
 # ✨ Features
 
-### 🏠 Home Page
+### Home Page
 
-- Hero banner
-- Modern landing page
+- Hero section
 - Call-to-action button
 - Navigation to the camper catalog
 
-### 🚐 Camper Catalog
+### Camper Catalog
 
-- Display all available campers
-- Backend filtering
-- Infinite pagination (Load More)
+- Browse available campers
+- Infinite pagination using **Load More**
+- Server-side filtering
 - Search by location
 - Filter by camper form
 - Filter by engine type
 - Filter by transmission
-- Responsive camper cards
-- Loading states
+- Loading state
 - Empty search state
 - Error handling
 
-### 📄 Camper Details
+### Camper Details
 
-- Complete camper information
-- Image gallery
+- Detailed camper information
+- Responsive image gallery
 - Customer reviews
-- Five-star rating display
+- Five-star ratings
 - Booking form
-- Successful booking notification
+- Success notification after booking
 
 ---
 
@@ -56,7 +59,7 @@ A modern web application for browsing, filtering, and booking camper vans. Trave
 ### Frontend
 
 - Next.js (App Router)
-- React 19
+- React
 - TypeScript
 
 ### Styling
@@ -77,34 +80,25 @@ A modern web application for browsing, filtering, and booking camper vans. Trave
 - Swiper
 - React Icons
 
-### Development Tools
+### Development
 
 - ESLint
 - Prettier
 
 ---
 
-# 📂 Project Structure
+# 🏗 Architecture
 
-```text
+The project follows a **feature-based architecture**, making the codebase scalable, maintainable, and easy to extend.
+
+```
 src
 │
 ├── app
-│   ├── catalog
-│   ├── catalog/[camperId]
-│   ├── api
-│   ├── layout.tsx
-│   └── page.tsx
 │
 ├── features
 │   ├── catalog
-│   │   ├── hooks
-│   │   └── components
-│   │
 │   ├── camper
-│   │   ├── hooks
-│   │   └── components
-│   │
 │   ├── home
 │   └── components
 │
@@ -121,37 +115,64 @@ src
 └── styles
 ```
 
-The project follows a feature-based architecture that separates business logic, reusable UI components, services, hooks, and types into dedicated modules, improving scalability and maintainability.
+Business logic, reusable components, hooks, API services, and shared types are separated into dedicated modules.
+
+---
+
+# 🌐 Backend API
+
+The application communicates with the official **TravelTrucks REST API**.
+
+### Base URL
+
+```
+https://campers-api.goit.study
+```
+
+### Documentation
+
+https://campers-api.goit.study/docs
+
+The backend provides endpoints for:
+
+- Camper catalog
+- Camper details
+- Reviews
+- Booking requests
+- Server-side filtering
+- Pagination
+
+Data fetching is implemented using **TanStack Query**, while HTTP requests are performed with **Axios**.
 
 ---
 
 # 🚀 Getting Started
 
-## Clone repository
+Clone the repository
 
 ```bash
 git clone https://github.com/denkcode/travel-trucks.git
 ```
 
-## Go to project folder
+Navigate to the project
 
 ```bash
 cd travel-trucks
 ```
 
-## Install dependencies
+Install dependencies
 
 ```bash
 npm install
 ```
 
-## Start development server
+Run the development server
 
 ```bash
 npm run dev
 ```
 
-The application will be available at
+Open
 
 ```
 http://localhost:3000
@@ -161,66 +182,12 @@ http://localhost:3000
 
 # 📜 Available Scripts
 
-### Development
-
-```bash
-npm run dev
-```
-
-Starts the development server.
-
----
-
-### Production Build
-
-```bash
-npm run build
-```
-
-Creates an optimized production build.
-
----
-
-### Start Production
-
-```bash
-npm run start
-```
-
-Runs the production version.
-
----
-
-### Lint
-
-```bash
-npm run lint
-```
-
-Runs ESLint.
-
----
-
-# 🌐 API
-
-The project communicates with the official GoIT backend.
-
-Base URL
-
-```
-https://campers-api.goit.study
-```
-
-### Main API functionality
-
-- Get camper catalog
-- Infinite pagination
-- Backend filtering
-- Camper details
-- Camper reviews
-- Booking requests
-
-Filtering is performed on the server using query parameters.
+| Command | Description |
+|----------|-------------|
+| npm run dev | Starts the development server |
+| npm run build | Creates a production build |
+| npm run start | Starts the production server |
+| npm run lint | Runs ESLint |
 
 ---
 
@@ -234,11 +201,11 @@ The landing page introduces the application and provides quick navigation to the
 
 ## 🚐 Catalog
 
-The catalog page allows users to
+Users can
 
 - browse campers
-- filter campers
 - search by location
+- filter campers
 - load additional campers
 - open camper details
 
@@ -246,44 +213,31 @@ The catalog page allows users to
 
 ## 📄 Camper Details
 
-The details page contains
+Users can
 
-- camper gallery
-- specifications
-- reviews
-- booking form
+- browse the image gallery
+- read reviews
+- check camper specifications
+- submit a booking request
 
 ---
 
 # ⚡ Performance
 
-The application includes several performance optimizations:
+The application includes several optimizations:
 
 - TanStack Query caching
-- Infinite Query pagination
+- Infinite queries
+- Server-side filtering
 - Optimized API requests
 - Component-based architecture
 - Client-side routing
-- Lazy loading of additional camper pages
 
 ---
 
 # 📱 Responsive Design
 
-The project follows the provided Figma design and includes responsive layouts for different screen sizes.
-
----
-
-# 🎨 UI Features
-
-- Modern interface
-- Clean component architecture
-- Loading indicators
-- Error handling
-- Empty state
-- Interactive filters
-- Image slider
-- Booking form validation
+The application follows the provided Figma design and is optimized for desktop devices. Additional responsive behavior has also been implemented to improve the user experience on smaller screens.
 
 ---
 
@@ -291,19 +245,19 @@ The project follows the provided Figma design and includes responsive layouts fo
 
 ## Home
 
-> Add screenshot here
+_Add screenshot_
 
 ---
 
-## Camper Catalog
+## Catalog
 
-> Add screenshot here
+_Add screenshot_
 
 ---
 
 ## Camper Details
 
-> Add screenshot here
+_Add screenshot_
 
 ---
 
@@ -311,24 +265,7 @@ The project follows the provided Figma design and includes responsive layouts fo
 
 The application is deployed on **Vercel**.
 
-Production URL
-
 https://travel-trucks-five-liard.vercel.app/
-
----
-
-# 🔮 Future Improvements
-
-Possible future enhancements:
-
-- Favorites functionality
-- Authentication
-- User profile
-- Booking history
-- Dark mode
-- Camper comparison
-- Interactive map integration
-- Advanced sorting options
 
 ---
 
@@ -340,18 +277,19 @@ GitHub
 
 https://github.com/denkcode
 
-LinkedIn
+---
 
-_Add your LinkedIn profile_
+# 🙏 Acknowledgements
+
+- GoIT
+- TravelTrucks API
+- Next.js
+- TanStack Query
+- Tailwind CSS
+- Swiper
 
 ---
 
 # 📄 License
 
-This project was developed as a final project for the **GoIT Fullstack Developer** course.
-
-It is intended for educational purposes.
-
----
-
-## ⭐ If you like this project, don't forget to leave a star on GitHub!
+This project was developed as the final project for the **GoIT Fullstack Developer** course and is intended for educational purposes.
