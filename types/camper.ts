@@ -10,6 +10,7 @@ export type GalleryImage = {
 
 export type CamperListItem = {
     id: string,
+    description: string,
     name: string,
     price: number,
     rating: number,
@@ -29,7 +30,6 @@ export type CamperListItem = {
 }
 
 export type CamperDetails = CamperListItem & {
-  description: string,
   gallery: GalleryImage[],
   createdAt: string,
   updatedAt: string
