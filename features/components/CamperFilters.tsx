@@ -20,15 +20,20 @@ export default function CamperFilters() {
           <label className="font-[var(--font-family)] font-normal text-base leading-[150%] text-[var(--gray)]">
             Location
           </label>
-          <input
-            type="text"
-            className="w-[312px] h-[56px] rounded-xl px-5 pr-[218px] py-[18px] placeholder:font-[var(--font-family)] font-normal bg-[var(--white)] text-base leading-[150%] text-[var(--gray)]"
-            placeholder="Enter location"
-            value={localFilters.location ?? ""}
-            onChange={(e) =>
-              setLocalFilters({ ...localFilters, location: e.target.value })
-            }
-          />
+          <div className="flex h-[56px] w-[312px] items-center gap-2 rounded-xl bg-[var(--white)] px-5">
+            <svg width="18" height="18" className="shrink-0 text-[var(--main)]">
+              <use href="/sprite.svg#icon-map" />
+            </svg>
+            <input
+              type="text"
+              className="h-full min-w-0 flex-1 bg-transparent text-base font-normal leading-[150%] text-[var(--main)] outline-none placeholder:text-[var(--gray)]"
+              placeholder="City"
+              value={localFilters.location ?? ""}
+              onChange={(e) =>
+                setLocalFilters({ ...localFilters, location: e.target.value })
+              }
+            />
+          </div>
         </div>
       </div>
       <div>
@@ -132,7 +137,7 @@ export default function CamperFilters() {
           ))}
         </div>
       </div>
-      <div className="mb-4 w-[312px] h-[56px] rounded-[200px] bg-[var(--grey-green)] flex items-center justify-center">
+      <div className="mb-4 w-[312px] h-[56px] rounded-[200px] bg-[var(--grey-green)] transition-colors hover:bg-[var(--green-hover)] flex items-center justify-center">
         <button
           className="w-full h-full text-[var(--white)]"
           onClick={() => updateFilters(localFilters)}
@@ -140,7 +145,7 @@ export default function CamperFilters() {
           Search
         </button>
       </div>
-      <div className="mb-2 w-[312px] h-[56px] rounded-[200px] bg-[var(--white)] flex items-center justify-center border border-[var(--gray-light)]">
+      <div className="mb-2 w-[312px] h-[56px] rounded-[200px] bg-[var(--white)] flex items-center justify-center border border-[var(--gray-light)] transition-colors hover:border-[var(--grey-green)]">
         <button
          className="w-full h-full flex items-center justify-center gap-2 text-[var(--main)] font-medium"
           onClick={() => {

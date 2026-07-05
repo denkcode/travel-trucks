@@ -5,18 +5,18 @@ import { usePathname } from "next/navigation";
 export const Header = () => {
   const pathname = usePathname();
   return (
-    <header className="border-b gap-[450px] border-[var(--badges)] px-16 py-6 w-[1440px] h-[72px] flex items-center text-[var(--main)]">
+    <header className="flex h-[72px] w-full items-center border-b border-[var(--badges)] px-16 text-[var(--main)]">
       <Link className="" href="/" aria-label="Home">
         <svg width="136" height="16">
           <use href="/sprite.svg#logo"></use>
         </svg>
       </Link>
-      <nav aria-label="Navigation">
+      <nav className="mx-auto" aria-label="Navigation">
         <ul className="flex justify-between items-center gap-8">
           <li>
             <Link
               href="/"
-              className={`font-medium text-base leading-6 text-center ${
+              className={`font-medium text-base leading-6 text-center transition-colors hover:text-[var(--grey-green)] ${
                 pathname === "/"
                   ? "text-[var(--grey-green)]"
                   : "text-[var(--main)]"
@@ -28,7 +28,7 @@ export const Header = () => {
           <li>
             <Link
               href="/catalog"
-              className={`font-medium text-base leading-6 text-center ${
+              className={`font-medium text-base leading-6 text-center transition-colors hover:text-[var(--grey-green)] ${
                 pathname === "/catalog"
                   ? "text-[var(--grey-green)]"
                   : "text-[var(--main)]"

@@ -22,19 +22,18 @@ export const useCatalogFilters = () => {
     engine,
   };
 
-  const updateFilters = (
-  newFilters: Partial<CampersFilters>,
-) => {
-  const merged: CampersFilters = { ...filters, ...newFilters };
-  const params = new URLSearchParams();
-  if (merged.location !== undefined) params.append("location", merged.location);
-  if (merged.form !== undefined) params.append("form", merged.form);
-  if (merged.transmission !== undefined)
-    params.append("transmission", merged.transmission);
-  if (merged.engine !== undefined) params.append("engine", merged.engine);
-  router.push(`${pathname}?${params.toString()}`);
-};
+  const updateFilters = (newFilters: Partial<CampersFilters>) => {
+    const merged: CampersFilters = { ...filters, ...newFilters };
+    const params = new URLSearchParams();
+
+    if (merged.location) params.append("location", merged.location);
+    if (merged.form) params.append("form", merged.form);
+    if (merged.transmission) params.append("transmission", merged.transmission);
+    if (merged.engine) params.append("engine", merged.engine);
+
+    const query = params.toString();
+    router.push(query ? `${pathname}?${query}` : pathname);
+  };
 
   return {filters, updateFilters};
 };
-

@@ -17,7 +17,7 @@ export const HeroBanner = () => {
 
           <Link
             href="/catalog"
-            className="inline-flex h-14 w-[173px] items-center justify-center whitespace-nowrap rounded-full bg-[var(--grey-green)] px-[60px] py-4 font-[var(--font-family)] text-base font-medium leading-6 tracking-[-0.01em] text-[var(--white)]"
+            className="inline-flex h-14 w-[173px] items-center justify-center whitespace-nowrap rounded-full bg-[var(--grey-green)] px-[60px] py-4 font-[var(--font-family)] text-base font-medium leading-6 tracking-[-0.01em] text-[var(--white)] transition-colors hover:bg-[var(--green-hover)]"
           >
             View Now
           </Link>

@@ -79,8 +79,10 @@ export const CamperCard = ({ camper }: { camper: CamperListItem }) => {
           </div>
         </div>
         <Link
+          target="_blank"
+          rel="noopener noreferrer"
           href={`/catalog/${camper.id}`}
-          className="mt-auto inline-flex w-[173px] h-[56px] items-center justify-center rounded-[200px] bg-[var(--grey-green)] font-medium text-base tracking-[-0.01em] text-[var(--white)]"
+          className="mt-auto inline-flex w-[173px] h-[56px] items-center justify-center rounded-[200px] bg-[var(--grey-green)] font-medium text-base tracking-[-0.01em] text-[var(--white)] transition-colors hover:bg-[var(--green-hover)]"
         >
           Show More
         </Link>

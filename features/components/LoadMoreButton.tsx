@@ -1,5 +1,3 @@
-import Loading from "./Loading"
-
 type LoadProps = {
     onClick: () => void,
     disabled: boolean,
@@ -8,8 +6,12 @@ type LoadProps = {
 
 export const LoadMoreButton = ({onClick, disabled, isLoading}: LoadProps) => {
     return (
-        <div className="w-[145px] h-[56px] rounded-[200px] border border-[var(--gray-light)] px-8 py-4">
-            <button className="" onClick={onClick} disabled={disabled}>{isLoading ?  <Loading /> : "Load more"}</button>
-        </div>
+        <button
+  className="h-14 min-w-[190px] rounded-[200px] px-8 ![border-width:1px] ![border-style:dashed] [border-color:#9747FF] text-base font-medium text-[var(--main)] transition-colors disabled:cursor-not-allowed disabled:opacity-40"
+  onClick={onClick}
+  disabled={disabled}
+>
+  {isLoading ? "Loading..." : "Load more"}
+</button>
     )
 }
