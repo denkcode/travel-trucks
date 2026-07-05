@@ -1,4 +1,4 @@
-export type Booking = {
+export type BookingRequestDto = {
     name: string,
     email: string,
 }
