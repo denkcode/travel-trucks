@@ -69,7 +69,7 @@ export const CamperCard = ({ camper }: { camper: CamperListItem }) => {
             </p>
           </div>
 
-          <div className="flex justify-center items-center gap-2 mix-blend-multiply rounded-[100px] w-[109px] h-[48px] bg-[var(--badges)]">
+          <div className="flex justify-center items-center gap-2 mix-blend-multiply rounded-[100px] min-w-[109px] h-[48px] px-4 bg-[var(--badges)] whitespace-nowrap">
             <svg width="15" height="13">
               <use href="/sprite.svg#icon-car" />
             </svg>

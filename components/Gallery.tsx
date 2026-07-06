@@ -13,7 +13,7 @@ export const Gallery = ({ images }: { images: GalleryImage[] }) => {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="h-[360px] w-[560px] overflow-hidden rounded-xl bg-[var(--inputs)]">
+      <div className="h-[360px] w-[560px] overflow-hidden rounded-xl border border-[var(--gray-light)] bg-[var(--inputs)]">
         <Image
           src={mainImage.original}
           alt="Camper photo"

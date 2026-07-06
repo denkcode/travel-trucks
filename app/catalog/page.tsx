@@ -25,7 +25,7 @@ function CatalogContent() {
 
   const campers = data?.pages?.flatMap((page) => page.campers) ?? [];
   const hasCampers = campers.length > 0;
-  const filtersKey = JSON.stringify(filters);
+  // const filtersKey = JSON.stringify(filters);
   const clearFilters = () =>
     updateFilters({
       location: undefined,
@@ -35,8 +35,8 @@ function CatalogContent() {
     });
 
   return (
-    <div className="flex gap-8 px-[64px] pt-[48px]">
-      <CamperFilters key={filtersKey} />
+    <div className="mx-auto flex w-full max-w-[1440px] gap-8 px-16 pt-12">
+      <CamperFilters />
 
       <div className="flex flex-col flex-1 gap-6">
         {hasCampers ? (
