@@ -23,7 +23,9 @@ export const useCatalogFilters = () => {
   };
 
   const updateFilters = (newFilters: Partial<CampersFilters>) => {
+    console.log("updateFilters called with:", newFilters);
     const merged: CampersFilters = { ...filters, ...newFilters };
+    console.log("merged:", merged);
     const params = new URLSearchParams();
 
     if (merged.location) params.append("location", merged.location);
@@ -32,8 +34,9 @@ export const useCatalogFilters = () => {
     if (merged.engine) params.append("engine", merged.engine);
 
     const query = params.toString();
+    console.log("final query:", query, "pushing to:", query ? `${pathname}?${query}` : pathname);
     router.push(query ? `${pathname}?${query}` : pathname);
   };
 
-  return {filters, updateFilters};
+  return { filters, updateFilters };
 };
